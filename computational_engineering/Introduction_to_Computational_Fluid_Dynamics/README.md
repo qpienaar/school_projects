@@ -11,8 +11,11 @@ Thermal Analysis of Cable in Conduit Cooling Systems
 **Concepts:**
 CFD, FEM, Numerical methods, 3d modeling
 
-**Skills:**
-CFD simulation, meshing, CAD for simulation, meshing, numerical method impementation
+## Skills and Tools:
 
-**Languages and Tools:**
+### Engineering:
+CFD, FEM, heat transfer analysis, fluid dynamics, flow modeling,
+numerical simulation, meshing and discretization
+
+### Software and Programming:
 Altair CFD, Siemens NX, Python, C
