@@ -1,5 +1,4 @@
-**Introduction to Computational Fluid Dynamics Final Project: A Thermal Analysis of Cable in Conduit Cooling Systems
-**
+**Introduction to Computational Fluid Dynamics Final Project: A Thermal Analysis of Cable in Conduit Cooling Systems**
 **Description:**
 This project investigated the thermal behavior of Cable-in-Conduit (CIC) cooling systems used in Tokamak fusion reactors.
 Tokomak reactors use super conducting magnets to control a fusing plasma field. In order to coax superconducting properties out
