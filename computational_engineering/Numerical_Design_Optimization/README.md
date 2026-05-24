@@ -1,4 +1,4 @@
-**MANE 4280 Numerical Design Optimization**
+**Numerical Design Optimization**
 
 **Dr. Hickens**
 
