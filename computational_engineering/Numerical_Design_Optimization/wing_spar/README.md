@@ -35,7 +35,7 @@ convergence_study.m will produce the plot used in the convergence study
 plots.m will create plots illustrating the final optimization routine
 
 **Skills**
-Numerical modeling and design, constrained optimization, technical writing 
+Numerical design, constrained gradient based optimization, finite element discretization and analysis (FEA), Euler–Bernoulli beam modeling
 
 **Tools**
 Matlab
