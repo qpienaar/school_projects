@@ -22,8 +22,11 @@ Build: mpicc -O2 -o stencil hw3.c -lm
 
 Run: 
 sbatch run_serial.sh   # Serial baseline (1 rank)
+
 sbatch run_1node.sh    # Strong and weak scaling, 1 node (up to 32 ranks)
+
 sbatch run_2node.sh    # Strong and weak scaling, 2 nodes (64 ranks)
+
 sbatch run_4node.sh    # Strong and weak scaling, 4 nodes (128 ranks)
 
 **Skills**
