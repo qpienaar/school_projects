@@ -1,0 +1,33 @@
+
+                                Max     Line search  Directional  First-order 
+ Iter F-count        f(x)   constraint   steplength   derivative   optimality Procedure 
+    0      4     -1.48238       -0.058                                         
+    1      8     -3.89359    2.776e-17            1        -6.92         12.7   
+    2     14     -4.61533            0         0.25        -9.72         12.3   
+    3     20     -4.64812            0         0.25        -2.44         2.56   
+    4     24     -4.65953            0            1        -1.72        0.821   
+    5     28     -4.66789            0            1        -1.15       0.0245   
+    6     32      -4.6679            0            1       -0.025     0.000403   
+Active inequalities (to within options.ConstraintTolerance = 1e-06):
+  lower      upper     ineqlin   ineqnonlin
+               2                      
+
+x =
+
+    0.7028    0.3000    0.1574
+
+>> sigmastar = obj(x(1), x(2), x(3), T)
+
+sigmastar =
+
+    5.2156
+
+>> sigmastar/1.5
+
+ans =
+
+    3.4771
+
+sigma0 =
+
+    1.5203
