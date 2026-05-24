@@ -1,4 +1,4 @@
-**MANE 6140 Introduction to Computational Fluid Dynamics**
+**Introduction to Computational Fluid Dynamics**
 
 **Dr. Sahni**
 
