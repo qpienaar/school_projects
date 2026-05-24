@@ -1,7 +1,10 @@
 **Numerical Design Optimization Project 2: Wing Spar Optimization**
 
 **Description**
-xyz 
+This was the second project in Numerical Design Optimization. The goal of the project
+was to optimize the geometry of a long range UAV wingspar to minimize weight, subject
+to a maximum allowable load. A succusful optimization was achieved, and a detailed report is given in 
+NDO Proj 2.pdf
 
 The following files were written by me, all others were supplied by the instructor:
 run_opt.m
@@ -22,5 +25,7 @@ convergence_study.m will produce the plot used in the convergence study
 plots.m will create plots illustrating the final optimization routine
 
 **Skills**
+Numerical modeling and design, constrained optimization, technical writing 
 
 **Tools**
+Matlab
