@@ -17,4 +17,4 @@ https://github.com/mohammed-elkomy/Proj-4320
 Parallel computing, CUDA GPU acceleration, MPI computing, genetic algorithms, high performance computing, technical writing
 
 **Tools**
-Cuda, C, python
+Cuda, C, Python
