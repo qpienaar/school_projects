@@ -1,0 +1,164 @@
+>> opt_spar
+
+                                Max     Line search  Directional  First-order 
+ Iter F-count        f(x)   constraint   steplength   derivative   optimality Procedure 
+    0      1       13.607       0.9076                                         Infeasible start point
+    1      4      9.79041       0.5506          0.5        -26.3         81.7   
+    2      7      8.86645       0.3232          0.5        -14.5         38.3   
+    3     10      8.62305       0.1829          0.5        -8.47           16   
+    4     19      8.56511       0.1814      0.00781        -36.4         19.1   unreliable
+    5     22      8.54611      0.09888          0.5        -1.55         6.97   
+    6     25      8.39912        1.946          0.5        -4.17         16.9   unreliable
+    7     27      8.56851       0.5344            1         5.03         35.4   
+    8     29      8.59795       0.3346            1         4.38         27.5   
+    9     31      8.59684       0.1461            1         1.13         8.44   
+   10     33      8.59574     0.008588            1       -0.126         2.54  Hessian modified  
+   11     35      8.59568    6.843e-05            1        -1.37         13.5  Hessian modified twice  
+   12     37       8.5957    4.432e-09            1         58.6         2.89  Hessian modified twice  
+Active inequalities (to within options.ConstraintTolerance = 0.0001):
+  lower      upper     ineqlin   ineqnonlin
+   56         72         23          1
+   57         73         24          2
+   58         74         25          3
+   59         75         26          4
+   60         76         27          5
+   61         77         28          6
+   62         78         29          7
+   63         79         30          8
+   64         80         31          9
+   65         81         32         10
+   66         82         33         11
+   67         83         34         12
+   68         84         35         13
+   69         85         36         14
+   70         86         37         15
+   71         87         38         16
+              88         39         17
+              89         40         18
+              90         41         19
+              91         42         20
+              92         43         21
+              93         44         22
+              94         45         23
+                         46         24
+                         47         25
+                         48         26
+                         49         27
+                         50         28
+                         51         29
+                         52         30
+                         53         31
+                         54         32
+                         55         33
+                         56         34
+                         57         35
+                         58         36
+                         59         37
+                         60         38
+                         61         39
+                         62         40
+                         63         41
+                         64         42
+                         65         43
+                         66         44
+                         67         45
+                         68         46
+                         69         47
+                         70         48
+                         71         49
+                                    50
+                                    51
+                                    52
+                                    53
+                                    54
+                                    55
+
+Feasible point with lower objective function value found, but optimality criteria not satisfied. See output.bestfeasible..
+
+
+Local minimum possible. Constraints satisfied.
+
+fmincon stopped because the size of the current search direction is less than
+twice the value of the step size tolerance and constraints are 
+satisfied to within the value of the constraint tolerance.
+
+<stopping criteria details>
+
+f =
+
+    8.5957
+
+
+c =
+
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+   -0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+    0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0404
+   -0.2106
+   -0.3608
+   -0.4920
+   -0.6049
+   -0.7006
+   -0.7801
+   -0.8445
+   -0.8953
+   -0.9339
+   -0.9618
+   -0.9805
+   -0.9919
+   -0.9977
+   -0.9998
+   -1.0000
