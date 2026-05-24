@@ -7,7 +7,7 @@ This project investigated the structural optimization of a carbon-fiber wing spa
 Uncertainty in aerodynamic loading was modeled using normally distributed random variables, and Gauss–Hermite quadrature was used to estimate the mean and standard deviation of stress within the spar. MATLAB’s fmincon optimizer with an active-set algorithm was used to perform the constrained optimization, while gradients of both the objective and constraint functions were computed using complex-step differentiation. A convergence study was conducted to determine appropriate finite element and quadrature resolutions, and the final optimized design achieved a 70.68% reduction in mass relative to the nominal spar design while satisfying six-sigma stress constraints.
 
 The following files were written by me, all others were supplied by the instructor:
-opt_spar.m, calc_statistics.m, WingConstraints.m
+opt_spar.m, calc_statistics.m, WingConstraints.m, investigate_GHQ.m, fmincon_plots.m, calc_pertubation.m, calc_load.m, 
 
 **Instructions**
 
