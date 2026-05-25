@@ -6,7 +6,11 @@ This project models, linearizes, and designs a feedback control system for a sel
 
 ## System Dynamics
 The system is modeled as an inverted pendulum on a cart. The state vector is defined as:
-$$x = \begin{bmatrix} p \\ \dot{p} \\ \theta \\ \dot{\theta} \end{bmatrix}$$
+
+$$
+x = \begin{bmatrix} p \\ \dot{p} \\ \theta \\ \dot{\theta} \end{bmatrix}
+$$
+
 where:
 * $p$ is the horizontal displacement (m)
 * $\dot{p}$ is the linear velocity (m/s)
