@@ -10,7 +10,7 @@ A survey of fundamental issues in design of efficient programs for parallel comp
 1D Stencil on Multiple GPUs, 1D Stencil MPI, Parallel Image Recreation and Rendering with a Genetic Algorithm
 
 **Concepts:**
-GPU thread hierarchy and kernel design, Distributed memory programming, Multi-GPU unified memory management, Strong and weak scaling analysis, Parallel genetic algorithms, Island model population distribution
+GPU accelerated programming, Message passing interface (MPI), Distributed and unified memory, Strong and weak scaling analysis
 
 **Skills and Tools:**
 
