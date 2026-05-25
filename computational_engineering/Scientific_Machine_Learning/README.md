@@ -23,7 +23,7 @@ Quadrature Discrete Empirical Interpolation Method (QDIEM), Lasso and Ridge Regr
 
 **Engineering:**
 
-Neural network design and training, Gaussian process regression and uncertainty quantification, Dimensionality reduction and matrix decomposition, Sparse system identification, Physics-informed machine learning, Dynamical systems modeling, Numerical integration and quadrature methods, Regularization and model selection, Scientific data analysis, Technical writing in LaTeX
+Neural network design and training, Gaussian process regression and uncertainty quantification, Dimensionality reduction and matrix decomposition, Sparse system identification, Physics-informed machine learning, Dynamical systems modeling, Regularization and model selection, Scientific data analysis, Technical writing in LaTeX
 
 **Software and Languages:**
 Python, pytorch, Matplotlib, uv, linux
