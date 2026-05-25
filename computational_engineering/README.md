@@ -5,7 +5,7 @@ This section contains coursework and projects completed in the field of Computat
 **Courses**
 Introduction to Computational Fluid Dynamics, Numerical Design Optimization, Parallel Computing, Scientific Machine Learning
 
-**Skills: **
+**Skills:**
 Deep learning, parallel and high performance computing, constrained and unconstrained numerical design optimization, computational fluid dynamics, 3d modeling, finite element discretization, technical writing
 
 **Languages and Tools**
