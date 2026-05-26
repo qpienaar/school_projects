@@ -1,6 +1,6 @@
 # Mechatronics
 
-Mechatronics projects integrating electromechanical modeling, sensors, actuators, numerical simulation, and feedback-controller implementation in MATLAB and Simulink.
+The synergistic combination of mechanical engineering, electronics, control engineering, and computer science in the design process. The key areas of mechatronics studied in depth are control sensors and actuators, interfacing sensors and actuators to a microcomputer, discrete controller design, and real-time programming for control using the C programming language. The unifying theme for this heavily laboratory-based course is the integration of the key areas into a successful mechatronic design.
 
 ## Projects
 
