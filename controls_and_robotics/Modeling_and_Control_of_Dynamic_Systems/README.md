@@ -1,6 +1,6 @@
 # Modeling And Control Of Dynamic Systems
 
-Coursework in dynamic-system representation and feedback design using transfer functions, frequency-response analysis, and closed-loop performance evaluation.
+Introduction to modeling, analysis, and control of dynamic systems. Modeling of mechanical, electrical, and electromechanical systems. Time-domain and Laplace-Transform solutions. Block diagrams and transfer functions. Analysis and design of feedback control systems. Control system representation and characteristics. System performance specifications. Absolute stability criteria. Root-Locus and frequency response analysis and design methods. Systems compensation and controller design.
 
 ## Project
 
