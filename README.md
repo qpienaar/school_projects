@@ -2,6 +2,12 @@
 
 Coursework and research from Rensselaer Polytechnic Institute organized by engineering field, course, and project. The repository emphasizes computational modeling, optimization, high performance computing, machine learning, control systems, and robotics.
 
+## Resume
+
+[View or download the PDF resume](resume.pdf)
+
+[![Quinten Pienaar Resume](assets/resume-preview.png)](resume.pdf)
+
 ## Featured Projects
 
 | Project | Area | Summary |
