@@ -1,6 +1,8 @@
 # School Engineering Projects
 
-Coursework and research from Rensselaer Polytechnic Institute organized by engineering field, course, and project. The repository emphasizes computational modeling, optimization, high performance computing, machine learning, control systems, and robotics.
+This repository is a compilation of repersentative projects from my time studying Mechanical Engineering at RPI. It is intended for potential recruiters or collaborators to familiarize themselves with my past projects and skills. For questions or comments, please reach out to me at my email below.
+
+quinten.pienaar@gmail.com
 
 ## Resume
 
