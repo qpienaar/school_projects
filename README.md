@@ -30,4 +30,4 @@ Coursework and research from Rensselaer Polytechnic Institute organized by engin
 
 ## Documentation Notes
 
-Each field, course, and project directory contains its own README. Reports and presentations included in project folders provide the formal derivations and results; the READMEs provide a concise index and reproduction guidance. Mathematical notation in these documents uses GitHub-supported LaTeX delimiters such as `$x$` and `$$x$$`.
+Each field, course, and project directory contains its own README. Reports and presentations included in project folders provide the formal derivations and results; the READMEs provide a concise index and reproduction guidance. 
