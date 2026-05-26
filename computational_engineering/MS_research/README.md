@@ -1,4 +1,4 @@
-# MS Research: [Conversion and Analysis of Mesh Based and CSG based Particle Transport Simulations]
+# MS Research: Comparison of Mesh Based and CSG based Particle Transport Simulations
 
 ## Overview
 
