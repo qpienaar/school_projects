@@ -13,9 +13,9 @@ quinten.pienaar@gmail.com
 
 ## Resume
 
-[View the full-resolution resume](assets/Summer26Resume-1.png)
+[View the full-resolution resume](Summer26Resume-1.png)
 
-[![Quinten Pienaar Resume](assets/Summer26Resume-1.png)](assets/Summer26Resume-1.png)
+[![Quinten Pienaar Resume](Summer26Resume-1.png)](Summer26Resume-1.png)
 
 ## Featured Projects
 
