@@ -1,12 +1,25 @@
-**Computational Engineering Courses**
+# Computational Engineering
 
-This section contains coursework and projects completed in the field of Computational Engineering at Rensselaer Polytechnic Institute. Projects span Scientific Machine Learning, Parallel Computing, Numerical Design Optimization, and Introduction to Computational Fluid Dynamics, and are implemented primarily in Python, MATLAB and C/CUDA. Work ranges from training neural networks for path planning, parallel stencil algorithms on RPI's AiMOS supercomputing cluster, thermal analysis of Tokomak reactor cooling systems, and the optimization of a wing spar for uncertain loading.
+Computational engineering coursework and graduate research focused on translating physical and algorithmic problems into numerical models. Projects include thermal-fluid simulation, neural-network-assisted search, distributed computation, and structural optimization under deterministic and uncertain loading.
 
-**Courses**
-Introduction to Computational Fluid Dynamics, Numerical Design Optimization, Parallel Computing, Scientific Machine Learning
+## Courses And Research
 
-**Skills:**
-Deep learning, parallel and high performance computing, constrained and unconstrained numerical design optimization, computational fluid dynamics, 3d modeling, finite element discretization, technical writing
+| Directory | Focus | Projects |
+| --- | --- | --- |
+| [Introduction to Computational Fluid Dynamics](Introduction_to_Computational_Fluid_Dynamics/) | Discretization and thermal-fluid simulation | Cable-in-conduit cooling analysis |
+| [Scientific Machine Learning](Scientific_Machine_Learning/) | Data-driven methods for scientific systems | Deep learning path planning |
+| [Parallel Computing](Parallel_Computing/) | MPI, CUDA, and performance scaling | Image rendering GA; MPI and multi-GPU stencils |
+| [Numerical Design Optimization](Numerical_Design_Optimization/) | Constrained design and uncertainty quantification | Wing spars and amusement ride optimization |
+| [MS Research](MS_research/) | Master's research documentation | Overview template to be completed |
 
-**Languages and Tools**
-Altair CFD, Siemens NX, Python, pytorch, Matplotlib, MATLAB, C, C++, CUDA
+## Methods
+
+- Computational fluid dynamics and heat transfer modeling.
+- Finite element structural analysis using Euler-Bernoulli beam theory.
+- Gradient-based constrained optimization, surrogate modeling, and uncertainty quantification.
+- Machine learning for search heuristics.
+- GPU and distributed-memory performance analysis.
+
+## Languages And Tools
+
+Python, PyTorch, MATLAB, C, C++, CUDA, MPI, Slurm, Altair CFD, and Siemens NX.

@@ -1,41 +1,32 @@
-**Numerical Design Optimization Project 2: Wing Spar Optimization**
+# Wing Spar Optimization
 
-**Description**
-This project investigated the structural optimization of a carbon fiber wing spar for a long-endurance unmanned aerial vehicle (UAV). The objective was to minimize spar mass while ensuring the structure could withstand expected aerodynamic loading during a 2.5g maneuver. The spar geometry was parameterized by its inner and outer radii along the span, and a finite element discretization based on Euler–Bernoulli beam theory was used to compute stress and deformation throughout the structure.
+## Overview
 
-MATLAB’s fmincon optimizer with the active-set algorithm was used to perform the constrained optimization, with stress, manufacturability, and geometric limits imposed as constraints. Custom functions were developed to calculate stress distributions, spar volume, and analytical gradients using complex-step differentiation. A convergence study was conducted to determine an appropriate mesh resolution, and the final optimized design achieved a 62% reduction in mass relative to the nominal spar design while satisfying all structural constraints.
+This project minimizes the mass of a carbon-fiber wing spar for a long-endurance UAV while satisfying stress and geometry constraints during a $2.5g$ maneuver. The spar is represented as an annular beam with spanwise inner and outer radii as design variables.
 
-The following files were written by me, all others were supplied by the instructor:
+## Technical Approach And Results
 
-run_opt.m
+A finite element model based on Euler-Bernoulli beam theory computes displacement and tensile stress. MATLAB `fmincon` performs active-set constrained optimization, and supporting routines provide load construction, objective and constraint evaluation, and convergence plots. The project report records a 62% mass reduction relative to the nominal design while meeting the structural constraints.
 
-constrain.m
+## Repository Contents
 
-obj.m
+| File Or Group | Description |
+| --- | --- |
+| [`run_opt.m`](run_opt.m) | Main optimization entry point and final plots. |
+| [`convergence_study.m`](convergence_study.m), [`plots.m`](plots.m) | Study and visualization scripts. |
+| [`obj.m`](obj.m), [`constrain.m`](constrain.m), [`ineq.m`](ineq.m) | Optimization objective and constraints. |
+| [`calc_load.m`](calc_load.m), [`get_radii.m`](get_radii.m), [`get_moment.m`](get_moment.m) | Design and loading utilities. |
+| `Calc*.m`, `*HermiteBasis.m`, [`GaussQuad.m`](GaussQuad.m) | Beam finite element support functions. |
+| [`NDO Proj 2.pdf`](NDO%20Proj%202.pdf) | Project report. |
 
-ineq.m
+## Running The Model
 
-get_radii.m
+In MATLAB with Optimization Toolbox available, run `run_opt.m` for the optimized spar design, `convergence_study.m` for mesh investigation, or `plots.m` for supporting figures.
 
-get_moment.m
+## Skills And Tools
 
-calcload.m
+MATLAB, constrained optimization, finite element analysis, Euler-Bernoulli beams, and gradient-based design.
 
-plots.m
+## Course
 
-convergence_study.m
-
-**Instructions**
-To recreate my results, download all matlab files to a directory. Then run one of the below files.
-
-run_opt.m will run the optimization and produce a design of the optimized wing spar
-
-convergence_study.m will produce the plot used in the convergence study
-
-plots.m will create plots illustrating the final optimization routine
-
-**Skills**
-Numerical design, constrained gradient based optimization, finite element discretization and analysis (FEA), Euler–Bernoulli beam modeling
-
-**Tools**
-Matlab
+[Numerical Design Optimization](../)

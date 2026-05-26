@@ -1,22 +1,31 @@
-**Numerical Design Optimization Project 4**
+# Wing Spar Optimization Under Uncertainty
 
-**Description**
+## Overview
 
-This project investigated the structural optimization of a carbon-fiber wing spar for a long-endurance unmanned aerial vehicle (UAV) under uncertain aerodynamic loading conditions. The objective was to minimize spar mass while subject to stochastic loading repersenting of gusts of wind and other in-flight disturbances. The wing spar was modeled as a circular annulus beam using Euler–Bernoulli beam theory and discretized with a finite element mesh to compute stress distributions along the span.
+This project extends structural optimization of a carbon-fiber UAV wing spar to uncertain aerodynamic loading. The objective is to minimize mass while requiring the annular beam to remain within a six-sigma stress limit under modeled disturbances.
 
-Uncertainty in aerodynamic loading was modeled using normally distributed random variables, and Gauss–Hermite quadrature was used to estimate the mean and standard deviation of stress within the spar. MATLAB’s fmincon optimizer with an active-set algorithm was used to perform the constrained optimization, while gradients of both the objective and constraint functions were computed using complex-step differentiation. A convergence study was conducted to determine appropriate finite element and quadrature resolutions, and the final optimized design achieved a 70.68% reduction in mass relative to the nominal spar design while satisfying six-sigma stress constraints.
+## Technical Approach And Results
 
-The following files were written by me, all others were supplied by the instructor:
-opt_spar.m, calc_statistics.m, WingConstraints.m, investigate_GHQ.m, fmincon_plots.m, calc_pertubation.m, calc_load.m, 
+The MATLAB implementation evaluates an Euler-Bernoulli finite element beam model along a 7.5 m semi-span. Gaussian uncertainty in loading is propagated using Gauss-Hermite quadrature; the constraint uses the estimated mean and standard deviation of stress as $\mu_\sigma + 6\sigma_\sigma$. `fmincon` performs constrained optimization with complex-step gradients. The recorded result reduces mass by 70.68% relative to the nominal spar while satisfying the probabilistic stress condition.
 
-**Instructions**
+## Repository Contents
 
-Download all Matlab files to a directory, run opt_spar.m
+| File Or Group | Description |
+| --- | --- |
+| [`opt_spar.m`](opt_spar.m) | Main optimization and plotting workflow. |
+| [`SparWeight.m`](SparWeight.m), [`WingConstraints.m`](WingConstraints.m) | Objective and probabilistic constraints with gradients. |
+| [`calc_statistic.m`](calc_statistic.m), [`calc_perturbation.m`](calc_perturbation.m), [`investigate_GHQ.m`](investigate_GHQ.m) | Uncertainty and quadrature evaluation. |
+| [`fmincon_plots.m`](fmincon_plots.m), [`data.txt`](data.txt) | Results visualization and stored data. |
+| `Calc*.m`, `*HermiteBasis.m`, [`GaussQuad.m`](GaussQuad.m), [`calc_load.m`](calc_load.m) | Finite element and loading support. |
 
-**Skills**
+## Running The Model
 
-Numerical design, constrained gradient based optimization, Finite element discretization and analysis (FEA), Euler–Bernoulli beam theory, Gauss–Hermite quadrature
-Complex-step differentiation, technical writing
+In MATLAB with Optimization Toolbox available, run `opt_spar.m` to perform the uncertain-load optimization and generate geometry and stress plots.
 
-**Tools**
-Matlab
+## Skills And Tools
+
+MATLAB, uncertainty quantification, Gauss-Hermite quadrature, finite element analysis, complex-step differentiation, and constrained optimization.
+
+## Course
+
+[Numerical Design Optimization](../)

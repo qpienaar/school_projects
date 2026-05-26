@@ -1,38 +1,40 @@
-**Parallel Computing MPI Stencil**
+# MPI Stencil
 
-**Description**
+## Overview
 
-This project implements a one-dimensional stencil application using MPI, developed and benchmarked on RPI's AiMOS supercomputing cluster using IBM POWER9 CPU nodes. Each rank is distributed a chunk of a large 1D integer array, exchanges halo regions with its neighbors via non-blocking MPI communication, and computes a stencil sum over a configurable halo radius. Rank zero coordinates data initialization, scattering, and final gathering, with results validated analytically against expected boundary and interior values.
+This project implements a distributed one-dimensional stencil operation with MPI. Ranks hold portions of a large integer array, exchange halo data using nonblocking communication, compute local stencil values, and validate gathered output.
 
+## Technical Approach And Results
 
-Strong and weak scaling studies were conducted across one, two, and four compute nodes using up to 128 MPI ranks. Strong scaling results on a fixed array of 2^30 elements demonstrated near-linear speedup, reaching 108× at 128 ranks compared to the serial baseline of 930 seconds. Weak scaling experiments held per-rank workload constant at 2^24 elements, showing near-constant execution time of roughly 14–15 seconds across single-node configurations, with a gradual linear increase as the experiment scaled to multiple nodes — attributed to the centralized scatter and gather operations performed by rank zero becoming a serial bottleneck at scale.
+Strong and weak scaling experiments were designed for RPI's AiMOS IBM POWER9 nodes, reaching up to 128 ranks across four nodes. The report records near-linear strong scaling for a fixed $2^{30}$-element case, reaching a reported $108 \times$ speedup over a 930-second serial baseline. Weak scaling held approximately $2^{24}$ elements per rank and revealed increasing multi-node overhead attributed to centralized scatter/gather work.
 
-**Instructions**
+## Repository Contents
 
-Device Prerequisites
+| File | Description |
+| --- | --- |
+| [`hw3.c`](hw3.c) | MPI stencil implementation and validation. |
+| [`run_serial.sh`](run_serial.sh) | Serial-baseline Slurm run. |
+| [`run_1node.sh`](run_1node.sh) | One-node strong and weak scaling cases. |
+| [`run_2node.sh`](run_2node.sh) | Two-node scaling cases. |
+| [`run_4node.sh`](run_4node.sh) | Four-node scaling cases. |
+| [`hw3_draft.pdf`](hw3_draft.pdf) | Project report. |
 
-IBM POWER9 CPU nodes (or compatible architecture supporting the getticks cycle counter at 512 MHz),
-NVIDIA GPU (required for the AiMOS el8-rpi partition; 4 GPUs per node as configured in the sbatch scripts),
-Spectrum MPI (spectrum-mpi module),
-XL compiler (xl_r module),
-CUDA toolkit (cuda module),
-Slurm workload manager for job submission
+## Build And Run
 
-Build: mpicc -O2 -o stencil hw3.c -lm
+On an MPI/Slurm environment compatible with the AiMOS scripts:
 
-Run: 
-sbatch run_serial.sh   # Serial baseline (1 rank)
+```bash
+mpicc -O2 -o stencil hw3.c -lm
+sbatch run_serial.sh
+sbatch run_1node.sh
+sbatch run_2node.sh
+sbatch run_4node.sh
+```
 
-sbatch run_1node.sh    # Strong and weak scaling, 1 node (up to 32 ranks)
+## Skills And Tools
 
-sbatch run_2node.sh    # Strong and weak scaling, 2 nodes (64 ranks)
+C, MPI, Slurm, distributed-memory programming, halo exchange, and scaling analysis.
 
-sbatch run_4node.sh    # Strong and weak scaling, 4 nodes (128 ranks)
+## Course
 
-**Skills**
-
-Parallel computing, MPI distributed memory programming, HPC cluster computing, C programming, strong and weak scaling analysis, technical writing
-
-**Tools**
-
-C, MPI (Spectrum MPI), CUDA, Slurm, IBM POWER9 / AiMOS
+[Parallel Computing](../)

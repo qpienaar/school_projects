@@ -1,24 +1,38 @@
-**Scientific Machine Learning: Efficient Path Planning with Neural Networks**
+# Deep Learning Path Planning
 
-**Description**
+## Overview
 
-This project investigates whether a convolutional neural network can be trained to serve as an improved heuristic for the A* path planning algorithm on randomly generated obstacle maps where traditional Euclidean distance performs poorly. A CNN is trained to estimate the true cost-to-goal from any free cell given a 3-channel input encoding the map layout, query position, and goal position. Two loss functions are compared during training: standard MSE (main.py) and a custom piecewise MAE loss that applies an asymmetric penalty to overestimates relative to the true cost, encouraging the network to learn admissible heuristics.
+This project tests whether a convolutional neural network can supply a useful heuristic for A* search on randomly generated obstacle maps. The model estimates cost-to-go from an encoded map, query cell, and goal cell, with the goal of exploring fewer states than a Euclidean-distance baseline while monitoring path optimality.
 
-Four experimental configurations were evaluated against a pure Euclidean baseline across 100 randomly generated 20×20 maps in rooms, walls, and random obstacle styles. Using the learned heuristic directly with piecewise MAE achieved the best search cost reduction of 34.2% with a 25.9% overestimation rate, while capping the heuristic at the Euclidean lower bound preserved 100% admissibility and optimality at a more modest 5.5% reduction. Results confirm that neural networks can meaningfully reduce A* search cost, and that asymmetric loss functions improve admissibility without fully sacrificing efficiency.
+## Technical Approach
 
-**Instructions**
+- Generate connected maps with random, wall, and room-style obstacles.
+- Compute target path costs with A* and train a CNN on three-channel map inputs.
+- Compare mean-squared-error training with an asymmetric piecewise absolute-error loss that penalizes heuristic overestimation.
+- Evaluate learned and capped learned heuristics against Euclidean A* on $20 \times 20$ maps.
 
-Install all Python files to a directory.
+The final report records a 34.2% search-cost reduction for the directly applied piecewise-loss heuristic, with a 25.9% overestimation rate. Capping the learned value with the admissible baseline retained optimality while producing a smaller 5.5% search-cost reduction.
 
-main.py - Trains with standard MSE loss and saves the model to mse_model.pt.
+## Repository Contents
 
-mainv2.py - On first run trains with piecewise MAE loss and saves to heuristic_model.pt. On subsequent runs the saved model is loaded automatically. 
+| File | Description |
+| --- | --- |
+| [`astar.py`](astar.py) | A* implementation and heuristic interfaces. |
+| [`cnn.py`](cnn.py) | Neural-network definition. |
+| [`map.py`](map.py) | Obstacle-map generation and visualization. |
+| [`mainv2.py`](mainv2.py) | Training and evaluation using the asymmetric heuristic loss. |
+| [`alpha_sweep.py`](alpha_sweep.py) | Loss-parameter sweep support. |
+| `mse_model.pt`, `heuristic_model.pt` | Saved PyTorch model weights. |
+| [`SciMLFinal.pdf`](SciMLFinal.pdf) | Final project report. |
 
-Set RUN_ALPHA_SWEEP = True in mainv2.py to determine a desired alpha2 parameter
+## Running The Experiment
 
-**Skills**
+Use a Python environment with PyTorch, NumPy, and Matplotlib. Run `mainv2.py` to load or train the heuristic model and evaluate search behavior; `alpha_sweep.py` supports investigation of the asymmetric-loss weight.
 
-Path planning and search algorithms, Neural network design and training, technical presentations
+## Skills And Tools
 
-**Tools**
-Python, PyTorch, NumPy, Matplotlib
+Path planning, A* search, neural-network training, heuristic admissibility, Python, PyTorch, NumPy, and Matplotlib.
+
+## Course
+
+[Scientific Machine Learning](../)

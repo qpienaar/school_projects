@@ -1,21 +1,17 @@
-**Parallel Computing**
+# Parallel Computing
 
-**Dr. Carothers**
+This course addresses efficient programming for parallel computers, including shared memory, message passing, data parallelism, algorithmic efficiency, and scientific applications of MPI and GPU computation.
 
-**Description**
+## Projects
 
-A survey of fundamental issues in design of efficient programs for parallel computers. The topics discussed include models of parallel machines and programs, efficiency of parallel algorithms, programming styles for shared memory, message passing, data parallelism, and using MPI in scientific parallel programs. Parallel programming project required.
+| Project | Description | Tools |
+| --- | --- | --- |
+| [Parallel Image Recreation And Rendering](mona_lisa/) | Genetic-algorithm image approximation using CUDA rendering and MPI island-model scaling. | CUDA, MPI, C/C++, Python |
+| [MPI Stencil](mpi_stencil/) | Distributed one-dimensional stencil benchmark with strong and weak scaling studies. | C, MPI, Slurm |
+| [Multi-GPU Stencil](multi_gpu_stencil/) | CUDA Unified Memory stencil distributed over NVIDIA GPUs. | CUDA, C++, Slurm |
 
-**Projects:**
-1D Stencil on Multiple GPUs, 1D Stencil MPI, Parallel Image Recreation and Rendering with a Genetic Algorithm
+## Concepts
 
-**Concepts:**
-GPU accelerated programming, Message passing interface (MPI), Distributed and unified memory, Strong and weak scaling analysis
-
-**Skills and Tools:**
-
-**Engineering:**
-High performance computing, GPU-accelerated algorithms, MPI parallelism, Strong and weak scaling analysis, Performance profiling and bottleneck analysis, Technical writing
-
-**Software and Languages:**
-C, C++, Cuda
+- Domain decomposition, halo communication, GPU memory management, and kernel execution.
+- Strong and weak scaling analysis on the AiMOS high performance computing cluster.
+- Profiling performance bottlenecks and validating parallel numerical results.

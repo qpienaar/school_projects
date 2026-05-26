@@ -1,49 +1,44 @@
-# Mechatronics: Self-Balancing Segway Control Design
+# Self-Balancing Segway Control
 
-This project models, linearizes, and designs a feedback control system for a self-balancing Segway robot. The controller aims to maintain the robot's vertical balance (tilt angle $\theta = 0$) and control its horizontal displacement. 
+## Overview
 
----
+This project models and stabilizes a two-wheeled self-balancing robot as an inverted pendulum. The control objective is to regulate body tilt near the upright equilibrium while controlling horizontal displacement.
 
-## System Dynamics
-The system is modeled as an inverted pendulum on a cart. The state vector is defined as:
+## System Model
+
+The nonlinear state is
 
 $$
-x = \begin{bmatrix} p \\ \dot{p} \\ \theta \\ \dot{\theta} \end{bmatrix}
+x = \begin{bmatrix} p & \dot{p} & \theta & \dot{\theta} \end{bmatrix}^{T},
 $$
 
-where:
-* $p$ is the horizontal displacement (m)
-* $\dot{p}$ is the linear velocity (m/s)
-* $\theta$ is the tilt angle of the body (rad)
-* $\dot{\theta}$ is the angular velocity (rad/s)
+where $p$ is displacement and $\theta$ is body tilt. Motor voltage is the control input. `rhs.m` evaluates the coupled wheel and pendulum dynamics, and `GetLinModFtxu.m` obtains numerical Jacobians about the upright equilibrium for state-space controller design.
 
-The input $u$ is the motor control voltage. The equations of motion are non-linear, and the system is unstable in open-loop.
+## Technical Approach
 
----
+`determineABK.m` linearizes the nonlinear model and computes a linear-quadratic regulator (LQR) gain using weighted position, velocity, angle, and angular-rate states. Simulink models support nonlinear closed-loop simulation, linear-model investigation, and hardware-oriented implementation. An accompanying video records physical-system behavior.
 
-## Directory Contents
+## Repository Contents
 
-The following files are located in this directory:
+| File | Description |
+| --- | --- |
+| [`rhs.m`](rhs.m) | Nonlinear equations of motion. |
+| [`GetLinModFtxu.m`](GetLinModFtxu.m) | Central-difference numerical linearization utility. |
+| [`determineABK.m`](determineABK.m) | LQR gain design and controller simulations. |
+| [`simulate_sys.m`](simulate_sys.m) | Open-loop nonlinear simulation using `ode45`. |
+| [`nonlinmodel.slx`](nonlinmodel.slx) | Nonlinear Simulink model. |
+| [`linmodel.slx`](linmodel.slx) | Linear Simulink model. |
+| [`hardware_implimentation.slx`](hardware_implimentation.slx) | Hardware implementation model. |
+| [`VID-20251121-WA0004.mp4`](VID-20251121-WA0004.mp4) | Recorded physical demonstration. |
 
-### MATLAB Scripts & Functions
-* **[rhs.m](file:///home/quintenpienaar/github/controls_and_robotics/Mechatronics/segway/rhs.m)**: Defines the non-linear state derivative vector ($\dot{x}$) for the Segway's equations of motion. It resolves the internal reaction forces by setting up and solving a matrix system $Az = b$ for the acceleration components.
-* **[GetLinModFtxu.m](file:///home/quintenpienaar/github/controls_and_robotics/Mechatronics/segway/GetLinModFtxu.m)**: A utility function that numerically computes the Jacobian matrices $A$ and $B$ for any system function handle using central finite differences around a given state and input.
-* **[determineABK.m](file:///home/quintenpienaar/github/controls_and_robotics/Mechatronics/segway/determineABK.m)**: Designs the Linear Quadratic Regulator (LQR) state-feedback controller. It linearizes the system, calculates optimal gains ($K$), and simulates both standard state feedback and integrated state feedback (which introduces an extra state to eliminate steady-state position error).
-* **[simulate_sys.m](file:///home/quintenpienaar/github/controls_and_robotics/Mechatronics/segway/simulate_sys.m)**: Simulates the open-loop response of the non-linear Segway model to a constant voltage input using `ode45`.
+## Running The Model
 
-### Simulink Models
-* **[nonlinmodel.slx](file:///home/quintenpienaar/github/controls_and_robotics/Mechatronics/segway/nonlinmodel.slx)**: Non-linear simulation model of the Segway system.
-* **[linmodel.slx](file:///home/quintenpienaar/github/controls_and_robotics/Mechatronics/segway/linmodel.slx)**: Linear state-space model used to simulate the closed-loop performance.
-* **[hardware_implimentation.slx](file:///home/quintenpienaar/github/controls_and_robotics/Mechatronics/segway/hardware_implimentation.slx)**: Simulink configuration ready for hardware deployment.
+Use MATLAB with Simulink and Control System Toolbox. Run `simulate_sys.m` to inspect the nonlinear open-loop dynamics or `determineABK.m` to construct the LQR controller and execute the configured closed-loop simulation.
 
----
+## Skills And Tools
 
-## Instructions
+MATLAB, Simulink, nonlinear dynamics, numerical linearization, state-space control, and LQR design.
 
-1. **Linearize and Design Controller**:
-   Run the [determineABK.m](file:///home/quintenpienaar/github/controls_and_robotics/Mechatronics/segway/determineABK.m) script. This will:
-   * Perform numerical linearization about the stable equilibrium ($x_s = [0, 0, 0, 0]^T$, $u_s = 0$).
-   * Calculate LQR state-feedback gain matrices for both basic LQR and LQR with integral action.
-   * Simulate the closed-loop models and plot the displacement and tilt angle over time.
-2. **Open-Loop Simulation**:
-   Run [simulate_sys.m](file:///home/quintenpienaar/github/controls_and_robotics/Mechatronics/segway/simulate_sys.m) to observe the unstable open-loop behavior of the non-linear equations of motion.
+## Course
+
+[Mechatronics](../)

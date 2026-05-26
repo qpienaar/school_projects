@@ -1,17 +1,33 @@
-**Numerical Design Optimization Project 3: Amusement Park Ride Optimization**
+# Amusement Park Ride Optimization
 
-**Description**
+## Overview
 
-This project investigated the optimization of a Tilt-A-Whirl amusement ride using surrogate-based numerical optimization techniques. The objective was to maximize the variability of car angular velocity, modeled as the standard deviation of angular velocity over time, as a proxy for ride unpredictability and rider excitement. The ride dynamics were modeled using a nonlinear ordinary differential equation and simulated in MATLAB using the ode45 solver. Three primary design variables were optimized: track angular velocity, track inclination angle, and car radius.
+This project optimizes a Tilt-A-Whirl-style amusement ride by maximizing variation in car angular velocity as a proxy for an unpredictable ride experience. Design variables include track angular velocity, inclination angle, and car radius.
 
-Because the objective function depended on computationally expensive time-domain simulations, a Gaussian Process surrogate model was constructed using Latin hypercube sampling and MATLAB’s GPML toolbox. Optimization was then performed on the surrogate using MATLAB’s fmincon solver with an active-set algorithm. A convergence study was conducted to balance simulation accuracy and computational cost, and the final optimized design achieved more than a 300% improvement in angular velocity variability relative to the nominal design while satisfying all design constraints.
+## Technical Approach And Results
 
-**Instructions**
-To recreate my results download all Matlab files to a directory, then run runopt.m
+MATLAB `ode45` integrates a nonlinear ride model. Because repeated time-domain evaluations are expensive, Latin hypercube samples are used to train a Gaussian-process surrogate with the GPML toolbox, and `fmincon` searches the surrogate design space. The report records an improvement of more than 300% in angular-velocity variability relative to the nominal design while satisfying design constraints.
 
-**Skills**
-Numerical design, constrained optimization, guassian process regression, surrogate modeling,
-nonlinear dynamical systems, latin hypercube sampling, ODE's, technical writing
+## Repository Contents
 
-**Tools**
-Matlab
+| File | Description |
+| --- | --- |
+| [`runopt.m`](runopt.m) | Sampling, surrogate fitting, and optimization workflow. |
+| [`obj.m`](obj.m) | Dynamic-simulation objective evaluation. |
+| [`determineT.m`](determineT.m) | Simulation-horizon investigation. |
+| [`scale.m`](scale.m) | Design-variable scaling helper. |
+| [`fmincon_plots.m`](fmincon_plots.m), [`testing0bj.m`](testing0bj.m) | Visualization and objective exploration. |
+| [`fmincon.txt`](fmincon.txt) | Recorded optimization output. |
+| [`NDOProj3.pdf`](NDOProj3.pdf) | Project report. |
+
+## Running The Model
+
+Configure the GPML toolbox path at the start of `runopt.m`, then execute that script in MATLAB with Optimization Toolbox and Statistics and Machine Learning Toolbox support.
+
+## Skills And Tools
+
+MATLAB, nonlinear ODE simulation, Latin hypercube sampling, Gaussian-process regression, surrogate optimization, and `fmincon`.
+
+## Course
+
+[Numerical Design Optimization](../)

@@ -1,29 +1,19 @@
-**Scientific Machine Learning**
+# Scientific Machine Learning
 
-**Dr. Pan**
+This course studies machine learning techniques for science and engineering problems, with emphasis on dynamical systems and data-driven modeling of ordinary and partial differential equation systems. Topics include matrix decompositions, sparse identification, Koopman methods, Gaussian processes, and physics-informed learning.
 
-**Description**
+## Project
 
-Scientific machine learning (SciML) is a core component of artificial
-intelligence (AI) and a computational technology that can be trained, with scientific data,
-to augment or automate human skills. This course will introduce students to the theory and
-tools in SciML that are being used to interpret, analyze and modeling complex systems in
-science and engineering from the most general viewpoint of dynamical systems, i.e., nonlinear
-ordinary differential equations (ODE)/ partial differential equations (PDE) systems. Topics
-include review of linear algebra, singular value decomposition, SINDy, Koopman operator,
-physics-informed neural network, etc. Students will be expected to work on projects that
-requires coding experiences in Python and write documents in LATEX.
+| Project | Description | Tools |
+| --- | --- | --- |
+| [Deep Learning Path Planning](Deep_Learning_Path_Planning/) | A CNN heuristic for A* search on generated obstacle maps, compared against Euclidean-distance baselines. | Python, PyTorch, NumPy, Matplotlib |
 
-**Projects:** Final project - Efficient Path Planning with Neural Networks
+## Concepts
 
-**Concepts:** Deep learning, Guassian Process, Singular Value Decomposition, pseudo-inverse, video reconstruction,
-Quadrature Discrete Empirical Interpolation Method (QDIEM), Lasso and Ridge Regression, Sparse Identification of Nonlinear Dynamics (SINDy)
+- Neural-network training, custom loss functions, and model evaluation.
+- Dimensionality reduction, regression, and sparse system identification.
+- Technical communication of computational experiments.
 
-**Skills and Tools:**
+## Artifacts
 
-**Engineering:**
-
-Neural network design and training, Gaussian process regression and uncertainty quantification, Dimensionality reduction and matrix decomposition, Sparse system identification, Physics-informed machine learning, Dynamical systems modeling, Regularization and model selection, Scientific data analysis, Technical writing in LaTeX
-
-**Software and Languages:**
-Python, pytorch, Matplotlib, uv, linux
+The project directory includes implementation scripts, trained model weights, and a final report.

@@ -1,26 +1,34 @@
-**Parallel Computing Multi-GPU CUDA Stencil**
+# Multi-GPU CUDA Stencil
 
-**Description**
+## Overview
 
-This project implements a one-dimensional stencil algorithm distributed across multiple NVIDIA GPUs using CUDA Unified Memory, developed and benchmarked on RPI's AiMOS supercomputing cluster on a single IBM POWER9 node. The input array is allocated via cudaMallocManaged and divided evenly across devices, with each GPU prefetched its assigned chunk plus halo boundary regions via cudaMemPrefetchAsync. All kernel launches are issued before any synchronization barrier, allowing devices to execute concurrently in parallel. Output correctness is validated analytically against expected boundary and interior stencil values.
+This project distributes a one-dimensional stencil calculation across multiple NVIDIA GPUs using CUDA Unified Memory. Each GPU receives a partition and required halo region, launches work concurrently, and validates output against analytical stencil values.
 
-Performance was evaluated across 15 test configurations varying grid size (1024–16384 CUDA blocks) and device count (1, 2, and 4 GPUs) on a fixed problem size of 2^30 elements. The 2-GPU configuration was optimal, achieving a 3.58× speedup over the single-GPU baseline of 0.998 seconds. Grid size had negligible impact on execution time across all configurations, and extended experiments at 2^31 and 2^32 elements confirmed this trend, leaving the nature of the performance bottleneck an open question for future investigation.
+## Technical Approach And Results
 
-**Instructions**
+The benchmark was developed for a single IBM POWER9 AiMOS node with NVIDIA V100 GPUs. It varies CUDA block counts and the use of one, two, or four devices for a fixed $2^{30}$-element problem. The report records a best result with two GPUs, reaching a reported $3.58 \times$ speedup over a single-GPU baseline of 0.998 seconds; increased grid size produced little timing variation in the tested range.
 
-Device Prerequisites
+## Repository Contents
 
-IBM POWER9 node or compatible architecture supporting the getticks cycle counter at 512 MHz,
-1–4 NVIDIA V100 GPUs with support for CUDA Unified Memory and cudaMemPrefetchAsync,
-CUDA toolkit (tested with the cuda module on AiMOS),
-Slurm workload manager for job submission on AiMOS
+| File | Description |
+| --- | --- |
+| [`hw2.cu`](hw2.cu) | CUDA stencil program using managed-memory prefetch and multiple device launches. |
+| [`run_tests.sh`](run_tests.sh) | AiMOS/Slurm benchmark script. |
+| [`hw2report.pdf`](hw2report.pdf) | Performance report. |
 
-Build: nvcc -o 1d-stencil-strided hw2.cu
+## Build And Run
 
-Run: bash run_tests.sh
+On a compatible CUDA/AiMOS environment:
 
-**Skills**
-Parallel computing, CUDA GPU acceleration, multi-GPU programming, unified memory management, HPC cluster computing, performance analysis, technical writing
+```bash
+nvcc -o 1d-stencil-strided hw2.cu
+bash run_tests.sh
+```
 
-**Tools**
-CUDA, C++, nvcc, IBM POWER9 / AiMOS
+## Skills And Tools
+
+CUDA, C++, Unified Memory, GPU parallelism, Slurm, IBM POWER9, and performance analysis.
+
+## Course
+
+[Parallel Computing](../)

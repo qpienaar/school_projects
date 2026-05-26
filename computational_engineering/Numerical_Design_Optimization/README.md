@@ -1,26 +1,17 @@
-**Numerical Design Optimization**
+# Numerical Design Optimization
 
-**Dr. Hickens**
+This course applies numerical optimization to engineering design, covering gradient-based constrained and unconstrained methods, derivative evaluation, surrogate models, gradient-free methods, multi-objective design, and optimization under uncertainty.
 
-**Description:**
-This course introduces the theory and practical use of numerical design optimization methods. Topics include: gradient-based methods for unconstrained and constrained nonlinear optimization; numerical evaluation of derivatives; polynomial- and kriging-based surrogate models; gradient-free optimization methods; optimization under uncertainty; multi-objective and multi-disciplinary optimization. Projects require the use of computer programs to generate numerical results; therefore, experience with programming is highly recommended.
+## Projects
 
-**Projects:** Wing Spar Geometry Optimization, Amusement Park Ride Optimization Under Uncertainty, Wing Spar Geometry Optimization Under Uncertainty
+| Project | Description | Tools |
+| --- | --- | --- |
+| [Wing Spar Optimization](wing_spar/) | Mass minimization of an annular UAV wing spar under structural stress constraints. | MATLAB, `fmincon`, finite elements |
+| [Amusement Park Ride Optimization](amusement_park/) | Surrogate-based optimization of nonlinear Tilt-A-Whirl dynamics. | MATLAB, GPML, `ode45`, `fmincon` |
+| [Wing Spar Optimization Under Uncertainty](wing_spar_uncertain/) | Robust spar design with uncertain loading and six-sigma stress constraints. | MATLAB, Gauss-Hermite quadrature, `fmincon` |
 
-**Concepts:**
-Constrained and unconstrained numerical optimization
-Nonlinear dynamical systems
-Surrogate modeling
-Optimization under uncertainty
+## Concepts
 
-**Skills and Tools:**
-
-**Engineering:** 
-Engineering design optimization
-Uncertainty quantification
-Computational engineering
-Finite element discretization
-Convergence analysis
-Technical writing
-
-**Software and Programming:** Matlab
+- Finite element structural analysis and convergence studies.
+- Complex-step derivatives for gradient-based optimization.
+- Gaussian-process surrogate models and uncertainty quantification.

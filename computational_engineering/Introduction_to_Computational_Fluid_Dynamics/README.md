@@ -1,21 +1,19 @@
-**Introduction to Computational Fluid Dynamics**
+# Introduction To Computational Fluid Dynamics
 
-**Dr. Sahni**
+This course develops numerical methods for engineering flows and heat transfer, including finite difference, finite volume, and finite element perspectives; physical problem classification; discretization practice; and modeling of incompressible, compressible, laminar, and turbulent flows.
 
-**Description:**
-This is a course on introduction to computational fluid dynamics. This course provides knowledge necessary to model engineering applications consistent with energy and fluid-dynamic physical laws. Discretization models include: overview of finite difference, finite element, and finite volume discretization approaches, physical problem classification, discretization techniques, and numerical guidelines. Applications include: incompressible and compressible flows, laminar and turbulence flows, with introduction to computational fluid dynamics turbulence modeling, followed by boundary layer, and parabolized flow simplifications. 
+## Project
 
-**Projects:**
-Thermal Analysis of Cable in Conduit Cooling Systems
+| Project | Description | Tools |
+| --- | --- | --- |
+| [Cable-in-Conduit Thermal Analysis](Cable_in_Conduit_Thermal_Analysis/) | Thermal analysis of supercooled-helium cooling paths in a representative superconducting magnet conduit. | Altair CFD, Siemens NX |
 
-**Concepts:**
-CFD, FEM, Numerical methods, 3d modeling
+## Concepts
 
-**Skills and Tools:**
+- Conservation laws, numerical discretization, meshing, and boundary conditions.
+- Fluid dynamics and conjugate heat-transfer modeling.
+- CAD-based construction of simulation geometry.
 
-**Engineering:**
-CFD, FEM, heat transfer analysis, fluid dynamics, flow modeling,
-numerical simulation, meshing and discretization
+## Artifacts
 
-**Software and Programming:**
-Altair CFD, Siemens NX, Python, C
+The project directory contains the formal final report as a PDF in addition to its project summary.

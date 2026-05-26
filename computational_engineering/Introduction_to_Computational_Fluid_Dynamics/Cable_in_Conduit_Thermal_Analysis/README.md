@@ -1,26 +1,25 @@
-**Introduction to Computational Fluid Dynamics Final Project: A Thermal Analysis of Cable in Conduit Cooling Systems**
+# Cable-In-Conduit Thermal Analysis
 
-**Description:**
-This project investigated the thermal behavior of Cable-in-Conduit (CIC) cooling systems used in Tokamak fusion reactors.
-Tokomak reactors use super conducting magnets to control a fusing plasma field. In order to coax superconducting properties out
-of these magnets, they must be kept at temperatures near absolute zero, posing a challening thermal management problem. We based our analysis
-on the ITER cooling system, which consists of strands of conducting magnets wrapped around a central channel through which super 
-cooled Helium (SHe) is pumped. The primary goal of this analysis was to understand how fluid and heat moved between the magnetic
-strands and the central coolant channel.
+## Overview
 
-This was a challenging project for two principle reasons: a complex geometry, and the strange physical properties of SHe. 
+This final project studies the thermal-fluid behavior of a representative cable-in-conduit (CIC) cooling passage for superconducting magnets in a tokamak fusion reactor. Such magnets must operate near 4-6 K while surrounding an extremely hot plasma, making helium coolant distribution and heat transfer central design concerns.
 
-As described in the project report, a spiralized central channel and porrous magnetic body allows for mixing between SHe 
-flowing over the magnetic strands and SHe flowing through the central channel. This is a complex geometry to model, and a 
-few simplifications were made.
+## Technical Approach
 
-SHe has unique properties, such as virtually zero viscosity and incredible thermal conduction. This made interpreting our final
-results difficult, as we found that our model to be uniformly the temperature of the SHe at the inlet, and minimal mixing between
-our central and outer fluid channels. We were unsure if this was do to a mistake in our simulation design, or a natural consequence
-of our strange coolant, although more analysis is offered in the report.
+The model represents a CIC segment with magnetic strands surrounding a central coolant channel inside a steel jacket. A Siemens NX geometry introduced windows in the central channel to emulate exchange between central and outer supercooled-helium flow paths. Altair CFD was used to analyze flow and thermal behavior using low-temperature material properties for helium, superconducting strands, and stainless steel.
 
-**SKills:**
-CFD, FEM, Heat Transfer, Fluid Dynamics, CAD
+The simulation indicated nearly uniform coolant-temperature conditions and limited mixing between channels. The report discusses whether this behavior follows from the extreme helium properties and modeled geometry or from limitations in the numerical setup.
 
-**Tools:**
-Altair CFD, Siemens NX, C
+## Repository Contents
+
+| File | Description |
+| --- | --- |
+| [`CFD_FINAL.pdf`](CFD_FINAL.pdf) | Final report, including geometry, setup, numerical scheme, results, analysis, and appendices. |
+
+## Skills And Tools
+
+Computational fluid dynamics, heat transfer, CAD geometry, simulation setup, meshing, Altair CFD, and Siemens NX.
+
+## Course
+
+[Introduction to Computational Fluid Dynamics](../)
