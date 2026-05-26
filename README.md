@@ -4,6 +4,13 @@ This repository is a compilation of repersentative projects from my time studyin
 
 quinten.pienaar@gmail.com
 
+## Repository Organization
+
+| Field | Content |
+| --- | --- |
+| [Computational Engineering](computational_engineering/) | CFD, scientific machine learning, parallel computing, numerical design optimization, and MS research. |
+| [Controls and Robotics](controls_and_robotics/) | Mechatronics, dynamical-system control, and robotic motion planning. |
+
 ## Resume
 
 [View the full-resolution resume](assets/Summer26Resume-1.png)
@@ -21,13 +28,6 @@ quinten.pienaar@gmail.com
 | [Wing Spar Optimization Under Uncertainty](computational_engineering/Numerical_Design_Optimization/wing_spar_uncertain/) | Design optimization | Finite element structural optimization using stochastic loading and six-sigma stress constraints. |
 | [Moving Target Visibility Graph](controls_and_robotics/Robotics_II/final_project/) | Robotics | Dynamic path-planning data structure for interception of a moving target among polygonal obstacles. |
 | [Self-Balancing Segway Control](controls_and_robotics/Mechatronics/segway/) | Mechatronics | Nonlinear modeling, linearization, and LQR control of an inverted-pendulum robot. |
-
-## Repository Organization
-
-| Field | Content |
-| --- | --- |
-| [Computational Engineering](computational_engineering/) | CFD, scientific machine learning, parallel computing, numerical design optimization, and MS research. |
-| [Controls and Robotics](controls_and_robotics/) | Mechatronics, dynamical-system control, and robotic motion planning. |
 
 ## Technical Areas
 
