@@ -9,7 +9,7 @@ quinten.pienaar@gmail.com
 | Field | Content |
 | --- | --- |
 | [Computational Engineering](computational_engineering/) | CFD, scientific machine learning, parallel computing, numerical design optimization, and MS research. |
-| [Controls and Robotics](controls_and_robotics/) | Mechatronics, dynamical-system control, and robotic motion planning. |
+| [Controls and Robotics](controls_and_robotics/) | Mechatronics, modeling and control of dynamical systems, and robotics. |
 
 ## Resume
 
