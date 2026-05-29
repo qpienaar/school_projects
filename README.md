@@ -1,4 +1,4 @@
-# School Engineering Projects
+# Engineering Projects
 
 This repository is a compilation of repersentative projects from my time studying Mechanical Engineering at RPI. It is intended for potential recruiters or collaborators to familiarize themselves with my past projects and skills. For questions or comments, please reach out to me at my email below.
 
