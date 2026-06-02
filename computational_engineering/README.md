@@ -10,7 +10,7 @@ Computational engineering coursework and graduate research focused on translatin
 | [Scientific Machine Learning](Scientific_Machine_Learning/) | Data-driven methods for scientific systems | Deep learning path planning |
 | [Parallel Computing](Parallel_Computing/) | MPI, CUDA, and performance scaling | Image rendering GA; MPI and multi-GPU stencils |
 | [Numerical Design Optimization](Numerical_Design_Optimization/) | Constrained design and uncertainty quantification | Wing spars and amusement ride optimization |
-| [MS Research](MS_research/) | Master's research documentation | Overview template to be completed |
+| [MS Research](MS_research/) | Master's research documentation | Descriptive Overview |
 
 ## Methods
 
